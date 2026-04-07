@@ -110,7 +110,15 @@ button:hover {
 
 .termos {
     display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.termos label {
+    display: in;
     align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
 .hidden {

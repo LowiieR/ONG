@@ -79,7 +79,7 @@
             <div class="full">
                 <label>Moradia</label>
                 <select id="moradia" required>
-                    <option value="">Selecione</option>
+                    <option value="" disabled selected>Selecione</option>
                     <option value="casa">Casa</option>
                     <option value="apartamento">Apartamento</option>
                 </select>
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="full">
+            <div class="full" id="DivQuintal">
                 <div class="radio-group">
                     <label>Possui quintal?</label>
                     <div class="radio-options">
@@ -136,9 +136,9 @@
             </div>
 
             <div class="full termos">
-                <label>Eu aceito os <a href="#">termos de adoção</a>
+                <label>
                     <input type="checkbox" id="Termos" required>
-                    
+                    <label for="Termos">Eu aceito os <a href="#">termos de adoção</a></label>
                 </label>
             </div>
 
@@ -149,6 +149,6 @@
     </div>
 </section>
 
-
+<script src="scipts.js"></script>
 </body>
 </html>
