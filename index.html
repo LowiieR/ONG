@@ -7,85 +7,90 @@
 </head>
 <body>
  <form action="" method="get" id="FormAdocaoCaes">
-        <div>
-            <label for="NomeUsuario" >Nome completo: </label>
-            <input id="NomeUsuario" type="text" placeholder="Ex: Nome Sobrenome">
-        </div>
-        <div>
-            <label for="EmailUsuario">E-mail: </label>
-            <input type="email" id="EmailUsuario" placeholder="Ex: seu.email@gmail.com">
-        </div>
-        <div>
-            <label for="TelefoneUsuario">Telefone: </label>
-            <input type="tel" id="TelefoneUsuario" placeholder="xx9xxxxxxxx"
-             minlength= "8" maxlength="11" title="Deve seguir o seguinte padrão: xx9xxxxxxxx">
-        </div>
-        <div>
-            <label for="CpfUsuario">CPF: </label>
-            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"
-                maxlength="14" pattern="\d{11}" title="Digite o CPF sem pontos" required>
-        </div>
-        <div>
-            <label for="IdadeUsuario">Idade: </label>
-            <input type="number" id="IdadeUsuario" placeholder="Insira a sua idade">
-        </div>
-        <div>
-            <label for="CidadeUsuario">Qual a sua cidade?</label>
-            <input type="text" placeholder="Cidade - Estado, País" title="Coloque na seguinte formatação: Cidade - Estado, País" required>
-        </div>
-        <div>
-            <label for="Moradia">Moradia: </label>
-            <select name="Moradia" id="Moradia">
-                <option value="" disabled selected>Selecione uma das opções</option>
-                <option value="Casa">Casa</option>
-                <option value="Ap">Apartamento</option>
-            </select required>  
-        </div>
-        <div class="hidden" id="DivPermissao">
-           <label>O local permite animais de estimação?</label> <br>
-              <label for="PermiteSim">Sim</label>
-                <input type="radio" id="PermiteSim" name="Permite" value=true required>
-                <label for="PermiteNao">Não</label>
-                <input type="radio" id="PermiteNao" name="Permite" value=false required>
-        </div>
-        <div>
-            <label>Possui Quintal?</label><br>
-            <label for="QuintalSIm">Sim</label>
-            <input type="radio" id="QuintalSIm" name="Quintal" value=true required>
-            <label for="QuintalNao">Não</label>
-            <input type="radio" id="QuintalNao" name="Quintal" value=false required>
-        </div>
-        <div class="hidden" id="DivSeguranca">
-           <label>O quintal é seguro?</label> <br>
-              <label for="SegSim">Sim</label>
-                <input type="radio" id="SegSim" name="Seguranca" value=true required>
-                <label for="SegNao">Não</label>
-                <input type="radio" id="SegNao" name="Seguranca" value=false required>
-        </div>
-        <div>
-            <label>Já teve pet antes?</label><br>
-            <label for="PetSim">Sim</label>
-            <input type="radio" id="PetSim" name="Quintal" value=true required>
-            <label for="PetNao">Não</label>
-            <input type="radio" id="PetNao" name="Quintal" value=false required>
-        </div>
-        <div>
-            <label for="PetSozinho">Quantas horas o animal ficará sozinho?: </label>
-            <input type="number" id="PetSozinho" placeholder="Insira em horas" min="0" max="24">
-        </div>
-        <div>
-            <label for="MotivoAdocao"> Motivo da adoção?</label><br>
-            <textarea name="MotivoAdocao" id="MotivoAdocao" placeholder="Inserir texto" minlength="10"></textarea>
-        </div>
-        <div>
-            <input type="checkbox" id="Termos" value="Termos" required>
-            <label for="Termos"> Li e aceito os <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">termos de responsabilidade</a></label>
-        </div>
-        <div>
+    <div>
+        <label for="NomeUsuario">Nome completo: </label>
+        <input id="NomeUsuario" type="text" required minlength="3"> 
+    </div>
 
-        </div>
-        <button type="submit">subtmit</button>
-        <script src="scripts.js"></script>
-    </form>   
+    <div>
+        <label for="EmailUsuario">E-mail: </label>
+        <input type="email" id="EmailUsuario" required> 
+    </div>
+
+    <div>
+        <label for="TelefoneUsuario">Telefone: </label>
+        <input type="tel" id="TelefoneUsuario" minlength="8" maxlength="11" required> 
+    </div>
+
+    <div>
+        <label for="cpf">CPF: </label> 
+        <input type="text" id="cpf" name="cpf"
+            maxlength="11" pattern="\d{11}" required> 
+    </div>
+
+    <div>
+        <label for="IdadeUsuario">Idade: </label>
+        <input type="number" id="IdadeUsuario" min="18" required> 
+    </div>
+
+    <div>
+        <label for="CidadeUsuario">Qual a sua cidade?</label>
+        <input type="text" id="CidadeUsuario" required> 
+    </div>
+
+    <div>
+        <label for="Moradia">Moradia: </label>
+        <select name="Moradia" id="Moradia" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Casa">Casa</option>
+            <option value="Ap">Apartamento</option>
+        </select>
+    </div>
+
+    <div class="hidden" id="DivPermissao">
+        <label>O local permite animais?</label><br>
+        <input type="radio" name="Permite" value="sim">Sim
+        <input type="radio" name="Permite" value="nao">Não
+    </div>
+
+    <div>
+        <label>Possui Quintal?</label><br>
+        <input type="radio" name="Quintal" value="sim" required>Sim
+        <input type="radio" name="Quintal" value="nao" required>Não
+    </div>
+
+    <div class="hidden" id="DivSeguranca">
+        <label>O quintal é seguro?</label><br>
+        <input type="radio" name="Seguranca" value="sim">Sim
+        <input type="radio" name="Seguranca" value="nao">Não
+    </div>
+
+    <div>
+        <label>Já teve pet antes?</label><br>
+        
+        <input type="radio" name="TevePet" value="sim" required>Sim
+        <input type="radio" name="TevePet" value="nao" required>Não
+    </div>
+
+    <div>
+        <label for="PetSozinho">Horas sozinho:</label>
+        <input type="number" id="PetSozinho" min="0" max="24" required> 
+    </div>
+
+    <div>
+        <label for="MotivoAdocao">Motivo:</label><br>
+        <textarea id="MotivoAdocao" minlength="10" required></textarea> 
+    </div>
+
+    <div>
+        <input type="checkbox" id="Termos" required>
+        <label for="Termos">Aceito os <a href="#">termos</a></label>
+    </div>
+
+    <button type="submit">submit</button>
+
+    <script src="scripts.js"></script>
+</form>
+
 </body>
 </html>
