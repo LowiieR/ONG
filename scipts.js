@@ -41,7 +41,7 @@ document.getElementById("FormAdocaoCaes").addEventListener("submit", function (e
     if (idade < 18) {
         alert("Você precisa ter 18 anos ou mais");
         e.preventDefault();
-        return;
+        return false;
     }
 
     
@@ -52,21 +52,21 @@ document.getElementById("FormAdocaoCaes").addEventListener("submit", function (e
     }
 
     
-    if (moradia === "Ap") {
-        if (!permite || permite.value === "nao") {
-            alert("Apartamento precisa permitir pets");
-            e.preventDefault();
-            return;
-        }
+      if (moradia === "apartamento") {
+    const permiteAnimais = document.getElementById("permiteAnimais").checked;
+    if (!permiteAnimais) {
+      alert("O apartamento precisa permitir animais.");
+      return false;
     }
+  }
 
-    
-    if (moradia === "Casa") {
-        if (!quintal || quintal.value === "nao") {
-            alert("Casa precisa ter quintal");
-            e.preventDefault();
-            return;
-        }
+  if (moradia === "casa") {
+    const seguranca = document.getElementById("seguranca").checked;
+    if (!seguranca) {
+      alert("A casa precisa ter quintal seguro.");
+      return false;
+    }
+  }
 
         if (!seguranca || seguranca.value === "nao") {
             alert("O quintal precisa ser seguro");
@@ -76,19 +76,19 @@ document.getElementById("FormAdocaoCaes").addEventListener("submit", function (e
     }
 
     
-    if (horas > 8) {
-        let justificativa = prompt("Justifique deixar o animal sozinho:");
-        if (!justificativa || justificativa.length < 5) {
-            alert("Justificativa obrigatória");
-            e.preventDefault();
-            return;
-        }
+     if (PetSozinho > 8) {
+    const justificativa = document.getElementById("justificativa").value;
+
+    if (!justificativa || justificativa.length < 10) {
+      alert("Explique melhor por que o animal ficará mais de 8 horas sozinho.");
+      return false;
     }
+  }
 
     
-    if (tevePet && tevePet.value === "nao") {
-        alert("A ONG poderá acompanhar sua adaptação");
-    }
+    if (jaTevePet === "nao") {
+    alert("A ONG poderá realizar acompanhamento durante a adaptação do animal.");
+  }
 
-
-});
+return true;
+);

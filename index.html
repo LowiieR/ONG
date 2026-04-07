@@ -7,16 +7,19 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-   
-        <div> <img id="icon" src="assets/image-invert-removebg-preview.png" alt="Logo">
-    <p><strong>ONG PetCare</strong></p>
-</div>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Adoção</a>
-        <a href="#">Sobre Nós</a>
-    </nav>
+    <header class="header">
+  <div class="logo">
+    <img id="icon" src="assets/image-removebg-preview.png" alt="Logo">
+  </div>
+<h1>ONG PetCare</h1>
+  <nav class="nav">
+    
+    <a href="#">Início</a>
+    <a href="#">Adoção</a>
+    <a href="#">Sobre Nós</a>
+  </nav>
+
+  
 </header>
 
 
@@ -31,7 +34,7 @@
         </div>
     </div>
 
-    <img src="https://i.pinimg.com/736x/34/6a/9e/346a9e4749e3e125efd67b41a487b306.jpg" alt="dog">
+    <img src="assets/Us__we_re_dumb_and_dumber__p-removebg-preview.png" alt="pets">
 </section>
 
  <section class="form-section">
@@ -75,10 +78,10 @@
 
             <div class="full">
                 <label>Moradia</label>
-                <select id="Moradia" required>
+                <select id="moradia" required>
                     <option value="">Selecione</option>
-                    <option value="Casa">Casa</option>
-                    <option value="Ap">Apartamento</option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
                 </select>
             </div>
 
@@ -106,8 +109,8 @@
                 <div class="radio-group">
                     <label>O quintal é seguro?</label>
                     <div class="radio-options">
-                        <label><input type="radio" name="Seguranca" value="sim"> Sim</label>
-                        <label><input type="radio" name="Seguranca" value="nao"> Não</label>
+                        <label><input type="radio" name="seguranca" value="sim"> Sim</label>
+                        <label><input type="radio" name="seguranca" value="nao"> Não</label>
                     </div>
                 </div>
             </div>
@@ -116,8 +119,8 @@
                 <div class="radio-group">
                     <label>Já teve pet?</label>
                     <div class="radio-options">
-                        <label><input type="radio" name="TevePet" value="sim" required> Sim</label>
-                        <label><input type="radio" name="TevePet" value="nao" required> Não</label>
+                        <label><input type="radio" name="tevePet" value="sim" required> Sim</label>
+                        <label><input type="radio" name="tevePet" value="nao" required> Não</label>
                     </div>
                 </div>
             </div>
