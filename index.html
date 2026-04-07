@@ -4,93 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoção de Animais</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <form action="" method="get" id="FormAdocaoCaes">
-    <div>
-        <label for="NomeUsuario">Nome completo: </label>
-        <input id="NomeUsuario" type="text" required minlength="3"> 
+    <header>
+   
+        <div> <img id="icon" src="assets/image-invert-removebg-preview.png" alt="Logo">
+    <p><strong>ONG PetCare</strong></p>
+</div>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Adoção</a>
+        <a href="#">Sobre Nós</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Adote um amigo!</h1>
+        <p>Dê uma nova chance para um animal cheio de amor.</p>
+
+        <div class="hero-buttons">
+            <button class="btn-primary">Adotar agora</button>
+            <button class="btn-secondary">Ver animais</button>
+        </div>
     </div>
 
-    <div>
-        <label for="EmailUsuario">E-mail: </label>
-        <input type="email" id="EmailUsuario" required> 
+    <img src="https://i.pinimg.com/736x/34/6a/9e/346a9e4749e3e125efd67b41a487b306.jpg" alt="dog">
+</section>
+
+ <section class="form-section">
+
+    <h2>Formulário de Adoção 🐾</h2>
+    <p>Preencha os dados abaixo</p>
+
+    <div class="form-container">
+
+        <form id="FormAdocaoCaes">
+
+            <div class="full">
+                <label>Nome completo</label>
+                <input id="NomeUsuario" type="text" required minlength="3">
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" id="EmailUsuario" required>
+            </div>
+
+            <div>
+                <label>Telefone</label>
+                <input type="tel" id="TelefoneUsuario" required>
+            </div>
+
+            <div class="full">
+                <label>CPF</label>
+                <input type="text" id="cpf" required>
+            </div>
+
+            <div>
+                <label>Idade</label>
+                <input type="number" id="IdadeUsuario" required>
+            </div>
+
+            <div>
+                <label>Cidade</label>
+                <input type="text" id="CidadeUsuario" required>
+            </div>
+
+            <div class="full">
+                <label>Moradia</label>
+                <select id="Moradia" required>
+                    <option value="">Selecione</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Ap">Apartamento</option>
+                </select>
+            </div>
+
+            <div class="full hidden" id="DivPermissao">
+                <div class="radio-group">
+                    <label>Permite pets?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="Permite" value="sim"> Sim</label>
+                        <label><input type="radio" name="Permite" value="nao"> Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full">
+                <div class="radio-group">
+                    <label>Possui quintal?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" id="QuintalSIm" name="Quintal" value="sim" required> Sim</label>
+                        <label><input type="radio" id="QuintalNao" name="Quintal" value="nao" required> Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full hidden" id="DivSeguranca">
+                <div class="radio-group">
+                    <label>O quintal é seguro?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="Seguranca" value="sim"> Sim</label>
+                        <label><input type="radio" name="Seguranca" value="nao"> Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full">
+                <div class="radio-group">
+                    <label>Já teve pet?</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="TevePet" value="sim" required> Sim</label>
+                        <label><input type="radio" name="TevePet" value="nao" required> Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label>Horas  que o animal passará sozinho</label>
+                <input type="number" id="PetSozinho" min="0" max="8" required>
+            </div>
+
+            <div>
+                <label>Motivo da minha adoção</label>
+                <textarea id="MotivoAdocao" required></textarea>
+            </div>
+
+            <div class="full termos">
+                <label>Eu aceito os <a href="#">termos de adoção</a>
+                    <input type="checkbox" id="Termos" required>
+                    
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
     </div>
+</section>
 
-    <div>
-        <label for="TelefoneUsuario">Telefone: </label>
-        <input type="tel" id="TelefoneUsuario" minlength="8" maxlength="11" required> 
-    </div>
-
-    <div>
-        <label for="cpf">CPF: </label> 
-        <input type="text" id="cpf" name="cpf"
-            maxlength="11" pattern="\d{11}" required> 
-    </div>
-
-    <div>
-        <label for="IdadeUsuario">Idade: </label>
-        <input type="number" id="IdadeUsuario" min="18" required> 
-    </div>
-
-    <div>
-        <label for="CidadeUsuario">Qual a sua cidade?</label>
-        <input type="text" id="CidadeUsuario" required> 
-    </div>
-
-    <div>
-        <label for="Moradia">Moradia: </label>
-        <select name="Moradia" id="Moradia" required>
-            <option value="" disabled selected>Selecione</option>
-            <option value="Casa">Casa</option>
-            <option value="Ap">Apartamento</option>
-        </select>
-    </div>
-
-    <div class="hidden" id="DivPermissao">
-        <label>O local permite animais?</label><br>
-        <input type="radio" name="Permite" value="sim">Sim
-        <input type="radio" name="Permite" value="nao">Não
-    </div>
-
-    <div>
-        <label>Possui Quintal?</label><br>
-        <input type="radio" name="Quintal" value="sim" required>Sim
-        <input type="radio" name="Quintal" value="nao" required>Não
-    </div>
-
-    <div class="hidden" id="DivSeguranca">
-        <label>O quintal é seguro?</label><br>
-        <input type="radio" name="Seguranca" value="sim">Sim
-        <input type="radio" name="Seguranca" value="nao">Não
-    </div>
-
-    <div>
-        <label>Já teve pet antes?</label><br>
-        
-        <input type="radio" name="TevePet" value="sim" required>Sim
-        <input type="radio" name="TevePet" value="nao" required>Não
-    </div>
-
-    <div>
-        <label for="PetSozinho">Horas sozinho:</label>
-        <input type="number" id="PetSozinho" min="0" max="24" required> 
-    </div>
-
-    <div>
-        <label for="MotivoAdocao">Motivo:</label><br>
-        <textarea id="MotivoAdocao" minlength="10" required></textarea> 
-    </div>
-
-    <div>
-        <input type="checkbox" id="Termos" required>
-        <label for="Termos">Aceito os <a href="#">termos</a></label>
-    </div>
-
-    <button type="submit">submit</button>
-
-    <script src="scripts.js"></script>
-</form>
 
 </body>
 </html>
